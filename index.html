@@ -1,133 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conte seus hobbies e interesses e descubra carreiras em tecnologia que combinam com você.">
-  <title>Career Dreamer — Descubra sua carreira em tecnologia</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/config.js" defer></script>
-  <script src="js/app.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Conte seus hobbies e interesses e descubra carreiras em tecnologia que combinam com você.">
+
+    <title>Career Dreamer — Descubra sua carreira em tecnologia</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/config.js" defer></script>
+    <script src="js/app.js" defer></script>
 </head>
 
 <body>
 
-  <header class="topo">
-    <div class="container topo__conteudo">
-      <a href="index.html" class="marca">
-        <span class="marca__simbolo" aria-hidden="true">cd</span>
-        <span>Career Dreamer</span>
-      </a>
-    </div>
-  </header>
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <div class="container topo__conteudo">
 
-  <main class="container pagina-inicial">
+            <a href="index.html" class="marca">
+                <span class="marca__simbolo" aria-hidden="true">cd</span>
+                <span>Career Dreamer</span>
+            </a>
 
-    <section class="apresentacao">
-      <h1 class="titulo-principal">
-        Descubra carreiras em tecnologia que combinam com você
-      </h1>
+        </div>
+    </header>
 
-      <div class="apresentacao__texto">
-        Conte o que você gosta de fazer no tempo livre e o que desperta sua curiosidade.
-        Em poucos segundos você recebe um mapa de carreiras com o que estudar primeiro.
-      </div>
 
-      <h2 class="subtitulo">Como funciona o Mapeamento Vocacional</h2>
+    <!-- Conteúdo principal -->
+    <main class="container pagina-inicial">
 
-      <ol class="passos">
-        <li class="passo">Preencha seu nome, hobbies e interesses.</li>
-        <li class="passo">Nossa análise cruza suas respostas com perfis de carreira.</li>
-        <li class="passo">Você recebe as carreiras mais compatíveis e um roteiro de estudos.</li>
-      </ol>
-    </section>
+        <!-- Apresentação -->
+        <section class="apresentacao">
 
-    <section class="cartao" aria-labelledby="titulo-perfil">
-      <h2 class="subtitulo-cartao" id="titulo-perfil">Seu perfil</h2>
+            <h1 class="titulo-principal">
+                Descubra carreiras em tecnologia que combinam com você
+            </h1>
 
-      <form id="form-perfil" class="formulario" novalidate>
-        <div class="campo">
-          <div>
-            <label for="nome">Nome</label>
-          </div>
-          <div>
-<input
-    type="text"
-    id="nome"
-    name="nome"
-    placeholder="Ex.: Aline Santos"
-    required
-    aria-describedby="nome-erro"
+            <div class="apresentacao__texto">
+                Conte o que você gosta de fazer no tempo livre e o que desperta sua curiosidade.
+                Em poucos segundos você recebe um mapa de carreiras com o que estudar primeiro.
+            </div>
+
+            <h2 class="subtitulo">
+                Como funciona o Mapeamento Vocacional
+            </h2>
+
+            <ol class="passos">
+
+                <li class="passo">
+                    Preencha seu nome, hobbies e interesses.
+                </li>
+
+                <li class="passo">
+                    Nossa análise cruza suas respostas com perfis de carreira.
+                </li>
+
+                <li class="passo">
+                    Você recebe as carreiras mais compatíveis e um roteiro de estudos.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- Formulário -->
+        <section class="cartao" aria-labelledby="titulo-perfil">
+
+            <h2 class="subtitulo-cartao" id="titulo-perfil">
+                Seu perfil
+            </h2>
+
+            <form id="form-perfil" class="formulario" novalidate>
+
+                <!-- Nome -->
+                <div class="campo">
+
+                    <div>
+                        <label for="nome">Nome</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Ex.: Aline Santos"
+                            minlength="2"
+                            maxlength="60"
+                            required
+                            aria-describedby="nome-erro"
+                        >
+
+                        <p
+                            id="nome-erro"
+                            class="erro-campo"
+                            aria-live="polite">
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Hobbies -->
+                <div class="campo">
+
+                    <div>
+                        <label for="hobbies">Hobbies</label>
+                    </div>
+
+                    <div>
+                        <textarea
+                            id="hobbies"
+                            name="hobbies"
+                            rows="3"
+                            placeholder="Ex.: jogar videogame, desenhar, organizar eventos"
+                            required
+                            aria-describedby="hobbies-erro"
+                        ></textarea>
+
+                        <p
+                            id="hobbies-erro"
+                            class="erro-campo"
+                            aria-live="polite">
+                        </p>
+                    </div>
+
+                    <div class="dica">
+                        Separe cada hobby com vírgula.
+                    </div>
+
+                </div>
+
+
+                <!-- Áreas de interesse -->
+                <div class="campo">
+
+                    <div>
+                        <label for="interesses">Áreas de interesse</label>
+                    </div>
+
+                    <div>
+                        <textarea
+                            id="interesses"
+                            name="interesses"
+                            rows="3"
+                            placeholder="Ex.: design de interfaces, desenvolvimento web"
+                            required
+                            aria-describedby="interesses-erro"
+                        ></textarea>
+
+                        <p
+                            id="interesses-erro"
+                            class="erro-campo"
+                            aria-live="polite">
+                        </p>
+                    </div>
+
+                    <div class="dica">
+                        Separe cada interesse com vírgula.
+                    </div>
+
+                </div>
+
+
+                <!-- Botão de envio -->
+                <button type="submit" id="botao-enviar" class="botao">
+                    Descobrir minha carreira
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+
+        <div class="container">
+
+            <p>
+                Projeto acadêmico — Análise e Desenvolvimento de Sistemas.
+
+                <a href="resultado.html?exemplo">
+                    Ver um resultado de exemplo
+                </a>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Modal de indisponibilidade -->
+<dialog
+    id="modal-indisponivel"
+    class="modal"
+    aria-labelledby="modal-titulo"
+    aria-describedby="modal-mensagem"
 >
-<p id="nome-erro" class="erro-campo" aria-live="polite"></p>          </div>
-        </div>
+    <h2 id="modal-titulo">Tente mais tarde</h2>
 
-        <div class="campo">
-          <div>
-            <label for="hobbies">Hobbies</label>
-          </div>
-          <div>
-            <textarea
-    id="hobbies"
-    name="hobbies"
-    rows="3"
-    placeholder="Ex.: jogar videogame, desenhar, organizar eventos"
-    required
-    aria-describedby="hobbies-erro"
-></textarea>
-<p id="hobbies-erro" class="erro-campo" aria-live="polite"></p>
-          </div>
-          <div class="dica">Separe cada hobby com vírgula.</div>
-        </div>
+    <p id="modal-mensagem">
+        Nosso serviço ainda não está disponível.
+        Tente novamente em instantes.
+    </p>
 
-        <div class="campo">
-          <div>
-            <label for="interesses">Áreas de interesse</label>
-          </div>
-          <div>
-            <textarea
-    id="interesses"
-    name="interesses"
-    rows="3"
-    placeholder="Ex.: design de interfaces, desenvolvimento web"
-    required
-    aria-describedby="interesses-erro"
-></textarea>
-<p id="interesses-erro" class="erro-campo" aria-live="polite"></p>
-          </div>
-          <div class="dica">Separe cada interesse com vírgula.</div>
-        </div>
-
-        <button type="submit" class="botao">Descobrir minha carreira</button>
-      </form>
-<!-- Modal de serviço indisponível -->
-<div id="modal-indisponivel" class="modal" role="dialog"
-     aria-modal="true" aria-labelledby="modal-titulo" hidden>
-
-    <div class="modal-conteudo">
-        <h2 id="modal-titulo">Tente mais tarde</h2>
-
-        <p>
-            Nosso serviço ainda não está disponível.
-            Estamos trabalhando para disponibilizá-lo em breve.
-        </p>
-
-        <button type="button" id="botao-entendi" class="modal-botao">
+    <div class="modal__acoes">
+        <button
+            type="button"
+            id="botao-entendi"
+            class="botao"
+        >
             Entendi
         </button>
     </div>
-    </section>
-</div>
-  </main>
-
-  <footer class="rodape">
-    <div class="container">
-      <p>
-        Projeto acadêmico — Análise e Desenvolvimento de Sistemas.
-        <a href="resultado.html?exemplo">Ver um resultado de exemplo</a>
-      </p>
-    </div>
-  </footer>
+</dialog>
 
 </body>
 </html>
