@@ -45,39 +45,60 @@
     <section class="cartao" aria-labelledby="titulo-perfil">
       <h2 class="subtitulo-cartao" id="titulo-perfil">Seu perfil</h2>
 
-      <form id="form-perfil" class="formulario">
+      <form id="form-perfil" class="formulario" novalidate>
         <div class="campo">
           <div>
-            <label>Nome</label>
+            <label for="nome">Nome</label>
           </div>
           <div>
-            <input type="number" id="nome" name="nome" placeholder="Ex.: Aline Santos">
-          </div>
+<input
+    type="text"
+    id="nome"
+    name="nome"
+    placeholder="Ex.: Aline Santos"
+    required
+    aria-describedby="nome-erro"
+>
+<p id="nome-erro" class="erro-campo" aria-live="polite"></p>          </div>
         </div>
 
         <div class="campo">
           <div>
-            <label>Hobbies</label>
+            <label for="hobbies">Hobbies</label>
           </div>
           <div>
-            <textarea id="hobbies" name="hobbies" rows="3"
-                      placeholder="Ex.: jogar videogame, desenhar, organizar eventos"></textarea>
+            <textarea
+    id="hobbies"
+    name="hobbies"
+    rows="3"
+    placeholder="Ex.: jogar videogame, desenhar, organizar eventos"
+    required
+    aria-describedby="hobbies-erro"
+></textarea>
+<p id="hobbies-erro" class="erro-campo" aria-live="polite"></p>
           </div>
           <div class="dica">Separe cada hobby com vírgula.</div>
         </div>
 
         <div class="campo">
           <div>
-            <label>Áreas de interesse</label>
+            <label for="interesses">Áreas de interesse</label>
           </div>
           <div>
-            <textarea id="interesses" name="interesses" rows="3"
-                      placeholder="Ex.: design de interfaces, desenvolvimento web"></textarea>
+            <textarea
+    id="interesses"
+    name="interesses"
+    rows="3"
+    placeholder="Ex.: design de interfaces, desenvolvimento web"
+    required
+    aria-describedby="interesses-erro"
+></textarea>
+<p id="interesses-erro" class="erro-campo" aria-live="polite"></p>
           </div>
           <div class="dica">Separe cada interesse com vírgula.</div>
         </div>
 
-        <button type="button" class="botao">Descobrir minha carreira</button>
+        <button type="submit" class="botao">Descobrir minha carreira</button>
       </form>
     </section>
 
