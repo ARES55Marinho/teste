@@ -473,3 +473,60 @@ main {
 .campo [aria-invalid="true"] {
     border-color: var(--cor-erro);
 }
+
+/* Fundo escuro atrás do modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Esconde o modal quando estiver fechado */
+.modal[hidden] {
+    display: none;
+}
+
+/* Janela do modal */
+.modal-conteudo {
+    background: var(--cor-superficie);
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-conteudo h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.modal-conteudo p {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Botão Entendi */
+.modal-botao {
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modal-botao:hover {
+    opacity: 0.9;
+}
