@@ -65,8 +65,9 @@ a {
   color: var(--cor-primaria);
 }
 
-*:focus {
-  outline: none;
+:focus-visible {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 3px;
 }
 
 /* 3. Layout -------------------------------------------------------------- */
@@ -460,4 +461,15 @@ main {
     transition: none !important;
     animation: none !important;
   }
+}
+
+.erro-campo {
+    color: var(--cor-erro);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.campo [aria-invalid="true"] {
+    border-color: var(--cor-erro);
 }
