@@ -105,5 +105,33 @@ formulario.addEventListener('submit', (evento) => {
 
     // TODO: enviar o perfil para a API configurada em CONFIG.API_URL
     // e levar o usuário para a página resultado.html.
-    alert('Tente mais tarde');
+    abrirModal();
+});
+
+// Elementos do modal
+const modal = document.querySelector('#modal-indisponivel');
+const botaoEntendi = document.querySelector('#botao-entendi');
+
+// Abre o modal
+function abrirModal() {
+    modal.hidden = false;
+    botaoEntendi.focus();
+}
+
+// Fecha o modal
+function fecharModal() {
+    modal.hidden = true;
+
+    // Devolve o foco ao botão do formulário
+    formulario.querySelector('button[type="submit"]').focus();
+}
+
+// Fecha ao clicar em Entendi
+botaoEntendi.addEventListener('click', fecharModal);
+
+// Fecha ao pressionar Esc
+document.addEventListener('keydown', (evento) => {
+    if (evento.key === 'Escape' && !modal.hidden) {
+        fecharModal();
+    }
 });
