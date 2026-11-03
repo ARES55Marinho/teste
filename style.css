@@ -71,8 +71,9 @@ a {
 
 /* 3. Layout -------------------------------------------------------------- */
 .container {
-  width: 960px;
-  margin-inline: auto;
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
 }
 
 main {
