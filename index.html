@@ -9,58 +9,55 @@
   <script src="js/config.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
+
 <body>
 
-  <div class="topo">
+  <header class="topo">
     <div class="container topo__conteudo">
-      <div>
-        <a href="index.html" class="marca">
-          <div class="marca__simbolo">cd</div>
-          <div>Career Dreamer</div>
-        </a>
-      </div>
+      <a href="index.html" class="marca">
+        <span class="marca__simbolo" aria-hidden="true">cd</span>
+        <span>Career Dreamer</span>
+      </a>
     </div>
-  </div>
+  </header>
 
-  <div class="container pagina-inicial">
-    <div class="apresentacao">
-      <div class="titulo-principal">Descubra carreiras em tecnologia que combinam com você</div>
+  <main class="container pagina-inicial">
+
+    <section class="apresentacao">
+      <h1 class="titulo-principal">
+        Descubra carreiras em tecnologia que combinam com você
+      </h1>
+
       <div class="apresentacao__texto">
         Conte o que você gosta de fazer no tempo livre e o que desperta sua curiosidade.
         Em poucos segundos você recebe um mapa de carreiras com o que estudar primeiro.
       </div>
 
-      <div class="subtitulo">Como funciona o Mapeamento Vocacional</div>
-      <div class="passos">
-        <div class="passo">Preencha seu nome, hobbies e interesses.</div>
-        <div class="passo">Nossa análise cruza suas respostas com perfis de carreira.</div>
-        <div class="passo">Você recebe as carreiras mais compatíveis e um roteiro de estudos.</div>
-      </div>
-    </div>
+      <h2 class="subtitulo">Como funciona o Mapeamento Vocacional</h2>
 
-    <div class="cartao">
-      <div class="subtitulo-cartao">Seu perfil</div>
+      <ol class="passos">
+        <li class="passo">Preencha seu nome, hobbies e interesses.</li>
+        <li class="passo">Nossa análise cruza suas respostas com perfis de carreira.</li>
+        <li class="passo">Você recebe as carreiras mais compatíveis e um roteiro de estudos.</li>
+      </ol>
+    </section>
+
+    <section class="cartao" aria-labelledby="titulo-perfil">
+      <h2 class="subtitulo-cartao" id="titulo-perfil">Seu perfil</h2>
 
       <form id="form-perfil" class="formulario">
         <div class="campo">
           <div>
-<label for="nome">Nome</label>          </div>
+            <label>Nome</label>
+          </div>
           <div>
-           <input
-    type="text"
-    id="nome"
-    name="nome"
-    placeholder="Ex.: Aline Santos"
-    required
-    minlength="2"
-    maxlength="60"
->
+            <input type="number" id="nome" name="nome" placeholder="Ex.: Aline Santos">
           </div>
         </div>
 
         <div class="campo">
           <div>
-  <label for="hobbies">Hobbies</label>
+            <label>Hobbies</label>
           </div>
           <div>
             <textarea id="hobbies" name="hobbies" rows="3"
@@ -71,7 +68,7 @@
 
         <div class="campo">
           <div>
-            <label for="interesses">Áreas de interesse</label>
+            <label>Áreas de interesse</label>
           </div>
           <div>
             <textarea id="interesses" name="interesses" rows="3"
@@ -80,17 +77,20 @@
           <div class="dica">Separe cada interesse com vírgula.</div>
         </div>
 
-<button type="submit" class="botao"> Descobrir minha carreira </button>
+        <button type="button" class="botao">Descobrir minha carreira</button>
       </form>
-    </div>
-  </div>
+    </section>
 
-  <div class="rodape">
+  </main>
+
+  <footer class="rodape">
     <div class="container">
-      <p>Projeto acadêmico — Análise e Desenvolvimento de Sistemas.
-        <a href="resultado.html?exemplo">Ver um resultado de exemplo</a></p>
+      <p>
+        Projeto acadêmico — Análise e Desenvolvimento de Sistemas.
+        <a href="resultado.html?exemplo">Ver um resultado de exemplo</a>
+      </p>
     </div>
-  </div>
+  </footer>
 
 </body>
 </html>
