@@ -1,10 +1,8 @@
 /* ==========================================================================
-   Career Dreamer — folha de estilos única
-   Organização: 1. Variáveis  2. Base  3. Layout  4. Componentes
-                5. Página inicial  6. Página de resultado  7. Acessibilidade
+   Career Dreamer — folha de estilos
    ========================================================================== */
 
-/* 1. Variáveis ----------------------------------------------------------- */
+/* 1. Variáveis */
 :root {
   --cor-papel: #f6f7fb;
   --cor-superficie: #ffffff;
@@ -25,7 +23,7 @@
   --largura-max: 70rem;
 }
 
-/* 2. Base ---------------------------------------------------------------- */
+/* 2. Base */
 *,
 *::before,
 *::after {
@@ -66,15 +64,16 @@ a {
 }
 
 :focus-visible {
-    outline: 3px solid var(--cor-primaria);
-    outline-offset: 3px;
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 3px;
 }
 
-/* 3. Layout -------------------------------------------------------------- */
+/* 3. Layout */
 .container {
-    width: 100%;
-    max-width: 1000px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
 main {
@@ -106,7 +105,7 @@ main {
   margin: 0;
 }
 
-/* 4. Componentes --------------------------------------------------------- */
+/* 4. Componentes */
 .marca {
   display: inline-flex;
   align-items: center;
@@ -246,9 +245,9 @@ main {
   color: var(--cor-tinta-suave);
 }
 
-/* Modal (elemento <dialog> nativo) */
+/* Modal nativo */
 .modal {
-  width: min(26rem, 100% - 2rem);
+  width: min(26rem, calc(100% - 2rem));
   padding: 1.75rem;
   border: 0;
   border-top: 6px solid var(--cor-marca-texto);
@@ -256,6 +255,16 @@ main {
   background: var(--cor-superficie);
   color: var(--cor-tinta);
   box-shadow: 0 20px 50px rgb(27 33 64 / 0.25);
+}
+
+/* Garante que o modal fechado não apareça */
+dialog.modal:not([open]) {
+  display: none;
+}
+
+/* Exibe o modal somente quando estiver aberto */
+dialog.modal[open] {
+  display: block;
 }
 
 .modal::backdrop {
@@ -268,7 +277,7 @@ main {
   margin: 0;
 }
 
-/* 5. Página inicial ------------------------------------------------------ */
+/* 5. Página inicial */
 .pagina-inicial {
   display: grid;
   gap: 2rem;
@@ -334,7 +343,7 @@ main {
   }
 }
 
-/* 6. Página de resultado ------------------------------------------------- */
+/* 6. Página de resultado */
 .pagina-resultado {
   padding-block: 2.5rem 4rem;
 }
@@ -453,7 +462,7 @@ main {
   text-align: center;
 }
 
-/* 7. Acessibilidade ------------------------------------------------------ */
+/* 7. Acessibilidade */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -464,69 +473,12 @@ main {
 }
 
 .erro-campo {
-    color: var(--cor-erro);
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin: 0;
+  color: var(--cor-erro);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 .campo [aria-invalid="true"] {
-    border-color: var(--cor-erro);
-}
-
-/* Fundo escuro atrás do modal */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-    z-index: 1000;
-}
-
-/* Esconde o modal quando estiver fechado */
-.modal[hidden] {
-    display: none;
-}
-
-/* Janela do modal */
-.modal-conteudo {
-    background: var(--cor-superficie);
-    width: 100%;
-    max-width: 420px;
-    padding: 30px;
-    border-radius: 16px;
-    text-align: center;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.modal-conteudo h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.modal-conteudo p {
-    margin-bottom: 25px;
-    line-height: 1.5;
-}
-
-/* Botão Entendi */
-.modal-botao {
-    background: var(--cor-primaria);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.modal-botao:hover {
-    opacity: 0.9;
+  border-color: var(--cor-erro);
 }
