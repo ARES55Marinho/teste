@@ -1,4 +1,3 @@
-
 /**
  * Página de resultado.
  * Lê a resposta da API ou os dados de exemplo
@@ -62,6 +61,7 @@ function criarCardCarreira(carreira, indice) {
         carreira.title || 'Carreira não informada';
 
     const pontuacao = Number(carreira.match_score);
+
     const percentual = Number.isFinite(pontuacao)
         ? Math.min(100, Math.max(0, pontuacao))
         : 0;
