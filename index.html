@@ -18,7 +18,6 @@
 
 <body>
 
-    <!-- Cabeçalho -->
     <header class="topo">
         <div class="container topo__conteudo">
 
@@ -30,11 +29,8 @@
         </div>
     </header>
 
-
-    <!-- Conteúdo principal -->
     <main class="container pagina-inicial">
 
-        <!-- Apresentação -->
         <section class="apresentacao">
 
             <h1 class="titulo-principal">
@@ -68,8 +64,6 @@
 
         </section>
 
-
-        <!-- Formulário -->
         <section class="cartao" aria-labelledby="titulo-perfil">
 
             <h2 class="subtitulo-cartao" id="titulo-perfil">
@@ -78,98 +72,73 @@
 
             <form id="form-perfil" class="formulario" novalidate>
 
-                <!-- Nome -->
                 <div class="campo">
+                    <label for="nome">Nome</label>
 
-                    <div>
-                        <label for="nome">Nome</label>
-                    </div>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Ex.: Aline Santos"
+                        minlength="2"
+                        maxlength="60"
+                        required
+                        aria-describedby="nome-erro"
+                    >
 
-                    <div>
-                        <input
-                            type="text"
-                            id="nome"
-                            name="nome"
-                            placeholder="Ex.: Aline Santos"
-                            minlength="2"
-                            maxlength="60"
-                            required
-                            aria-describedby="nome-erro"
-                        >
-
-                        <p
-                            id="nome-erro"
-                            class="erro-campo"
-                            aria-live="polite">
-                        </p>
-                    </div>
-
+                    <p
+                        id="nome-erro"
+                        class="erro-campo"
+                        aria-live="polite">
+                    </p>
                 </div>
 
-
-                <!-- Hobbies -->
                 <div class="campo">
+                    <label for="hobbies">Hobbies</label>
 
-                    <div>
-                        <label for="hobbies">Hobbies</label>
-                    </div>
+                    <textarea
+                        id="hobbies"
+                        name="hobbies"
+                        rows="3"
+                        placeholder="Ex.: jogar videogame, desenhar, organizar eventos"
+                        required
+                        aria-describedby="hobbies-erro"
+                    ></textarea>
 
-                    <div>
-                        <textarea
-                            id="hobbies"
-                            name="hobbies"
-                            rows="3"
-                            placeholder="Ex.: jogar videogame, desenhar, organizar eventos"
-                            required
-                            aria-describedby="hobbies-erro"
-                        ></textarea>
+                    <p
+                        id="hobbies-erro"
+                        class="erro-campo"
+                        aria-live="polite">
+                    </p>
 
-                        <p
-                            id="hobbies-erro"
-                            class="erro-campo"
-                            aria-live="polite">
-                        </p>
-                    </div>
-
-                    <div class="dica">
+                    <p class="dica">
                         Separe cada hobby com vírgula.
-                    </div>
-
+                    </p>
                 </div>
 
-
-                <!-- Áreas de interesse -->
                 <div class="campo">
+                    <label for="interesses">Áreas de interesse</label>
 
-                    <div>
-                        <label for="interesses">Áreas de interesse</label>
-                    </div>
+                    <textarea
+                        id="interesses"
+                        name="interesses"
+                        rows="3"
+                        placeholder="Ex.: design de interfaces, desenvolvimento web"
+                        required
+                        aria-describedby="interesses-erro"
+                    ></textarea>
 
-                    <div>
-                        <textarea
-                            id="interesses"
-                            name="interesses"
-                            rows="3"
-                            placeholder="Ex.: design de interfaces, desenvolvimento web"
-                            required
-                            aria-describedby="interesses-erro"
-                        ></textarea>
+                    <p
+                        id="interesses-erro"
+                        class="erro-campo"
+                        aria-live="polite">
+                    </p>
 
-                        <p
-                            id="interesses-erro"
-                            class="erro-campo"
-                            aria-live="polite">
-                        </p>
-                    </div>
-
-                    <div class="dica">
+                    <p class="dica">
                         Separe cada interesse com vírgula.
-                    </div>
-
+                    </p>
                 </div>
 
-
-                <!-- Botão de envio -->
                 <button type="submit" id="botao-enviar" class="botao">
                     Descobrir minha carreira
                 </button>
@@ -180,12 +149,8 @@
 
     </main>
 
-
-    <!-- Rodapé -->
     <footer class="rodape">
-
         <div class="container">
-
             <p>
                 Projeto acadêmico — Análise e Desenvolvimento de Sistemas.
 
@@ -193,36 +158,35 @@
                     Ver um resultado de exemplo
                 </a>
             </p>
-
         </div>
-
     </footer>
 
-
     <!-- Modal de indisponibilidade -->
-<dialog
-    id="modal-indisponivel"
-    class="modal"
-    aria-labelledby="modal-titulo"
-    aria-describedby="modal-mensagem"
->
-    <h2 id="modal-titulo">Tente mais tarde</h2>
+    <dialog
+        id="modal-indisponivel"
+        class="modal"
+        aria-labelledby="modal-titulo"
+        aria-describedby="modal-mensagem"
+    >
 
-    <p id="modal-mensagem">
-        Nosso serviço ainda não está disponível.
-        Tente novamente em instantes.
-    </p>
+        <h2 id="modal-titulo">Tente mais tarde</h2>
 
-    <div class="modal__acoes">
-        <button
-            type="button"
-            id="botao-entendi"
-            class="botao"
-        >
-            Entendi
-        </button>
-    </div>
-</dialog>
+        <p id="modal-mensagem">
+            Nosso serviço ainda não está disponível.
+            Tente novamente em instantes.
+        </p>
+
+        <div class="modal__acoes">
+            <button
+                type="button"
+                id="botao-entendi"
+                class="botao"
+            >
+                Entendi
+            </button>
+        </div>
+
+    </dialog>
 
 </body>
 </html>
